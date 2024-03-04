@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2024 at 12:51 AM
+-- Generation Time: Mar 04, 2024 at 08:57 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,11 +42,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`u_id`, `u_first_name`, `u_last_name`, `u_email`, `u_password`, `is_approved`, `is_admin`) VALUES
-(1, 'Admin', '', '', 'admin', 1, 1),
+(1, 'Admin', 'Admin', 'enova003@odu.edu', '$2b$10$kVpUc/Ryqw2YYbFTGLKnR.yGAtwSI1Zzr9WB6tflcIn8pnOy6nxly', 1, 1),
 (4, 'test', 'test', 'test@test.com', '$2b$10$fihH187/r4aU/HpD6YwFUOaw6rCjrhSyssQiE0IIqIf75S9xiTRzW', 1, 0),
-(19, 'james', 'baxter', 'test@gmail.com', '$2b$10$o78ryBTXGbRKy9lqe2TwveB8ndGGtOqI6ep.mGv1XSwzi95aaS/y6', 1, 0),
-(64, 'brad', 'wey', 'bradway@email.com', '$2b$10$/.5zQSfe3ZfbBlvHV/T04.1D7VBUWkzonEH4tL0xM0QfcItMkFYQG', 1, 0),
-(79, 'ETHAN', 'N', 'enova003@odu.edu', '$2b$10$PzKAAM9HIif/HsKIC/lY6.HZMQpmL58GpoyOH7bhZdEWeLKh70prG', 1, 0);
+(19, 'james', 'baxter', 'test@gmail.com', '$2b$10$o78ryBTXGbRKy9lqe2TwveB8ndGGtOqI6ep.mGv1XSwzi95aaS/y6', 0, 0),
+(64, 'brad', 'wey', 'bradway@email.com', '$2b$10$/.5zQSfe3ZfbBlvHV/T04.1D7VBUWkzonEH4tL0xM0QfcItMkFYQG', 0, 0),
+(82, 'ethan', 'g', 'e.gabriel0402@gmail.com', '$2b$10$J7MV18bsOm/IQBBj9PMM3e.YNUtPRDZm/eMHgDTI3/amceQrSo2qO', 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -67,7 +67,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `u_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `u_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
