@@ -38,6 +38,9 @@ export default function Header() {
           </a>
 {/*           <a href="/profile" className="text-sm font-semibold leading-6 text-gray-200">
             myProfile
+          </a>
+          <a href="/admin" className="text-sm font-semibold leading-6 text-gray-200">
+            Admin
           </a> */}
         </Popover.Group>
       </nav>

@@ -30,8 +30,13 @@ export default function Login() {
         //alert(data.data.verify);
         code = prompt("Please enter the 5-digit verification code that was sent to your email");
         if(code == data.data.verify){
-          alert("login successful, redirecting you to your profile page")
-          window.location.href = `http://localhost:3000/profile?email=${email}`;
+          if(data.data.admin == 1){
+            alert("You are now being redirected to the admin page");
+            window.location.href = `http://localhost:3000/admin?email=${email}`;
+          }else{
+            alert("login successful, redirecting you to your profile page")
+            window.location.href = `http://localhost:3000/profile?email=${email}`;
+          }
         }
         else{
           alert("The verification code that you entered is incorrect");

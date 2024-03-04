@@ -66,6 +66,7 @@ router.post("/", (req, res) => {
                     email: req.body.u_email,
                     userId: result[0].u_id,
                     verify: oneTimePassword,
+                    admin: result[0].is_admin,
                   },
                 }); 
 

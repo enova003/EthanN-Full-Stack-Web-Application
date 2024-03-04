@@ -139,4 +139,35 @@ router.delete("/:id", (req, res) => {
   }
 });
 
+//get users that were not approved
+router.get("/approved/:approved", (req, res) => {
+  database.execute(`select * from user where is_approved = 0`, function (err, result) {
+    if (err) {
+      res.status(500).send(err.message);
+      return;
+    }
+    res.send(result);
+  });
+});
+
+// update user to approved status
+router.put("/approved/:id", (req, res) => {
+  try {
+    // u_first_name | u_last_name | u_email        | u_password | is_approved | is_admin
+    database.execute(
+      "update user set is_approved=? where u_id=?",
+      [req.body.is_approved, req.params.id],
+      function (err, result) {
+        if (result.affectedRows == 0) {
+          res.status(401).send("Record not found");
+        } else {
+          res.status(200).send("Record updated successfully");
+        }
+      }
+    );
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+
 module.exports = router;
