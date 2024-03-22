@@ -100,7 +100,7 @@ export default function Profile() {
 }
 
   return (
-    <main className="max-w-2xl mx-auto p-6 text-black">
+    <main className="max-w-2xl mx-auto mt-6 text-black bg-stone-500 rounded-3xl px-4 py-4">
         {userData ? (
         <>
         <section className="mb-6">
@@ -110,7 +110,7 @@ export default function Profile() {
           </ul>
         </section>
 
-        <div className="flex">
+        <div className="flex bg-stone-400 rounded-3xl px-2 py-2">
             <div className="w-1/2 mr-8">
                 <section className="mb-6">
                     <h2 className="mb-2 text-center"><strong>Change Password?</strong></h2>

@@ -9,27 +9,6 @@ function generateRandomFiveDigitNumber() {
   return Math.floor(10000 + Math.random() * 90000);
 }
 
-/* router.get("/", verifyTOken, (req, res) => {
-  try {
-    database.execute(
-      "select * from user where u_id=?",
-      [req.userId],
-      function (err, result) {
-        if (result == 0) {
-          res.status(401).send("Record not found");
-        } else {
-
-          sendEmail(result[0].u_email,`Login Verification`,`Your one time password is ${oneTimePassword}`);
-
-          res.status(200).send(result);
-        }
-      }
-    );
-  } catch (error) {
-    console.log(error.message);
-  }
-}); */
-
 router.post("/", (req, res) => {
   try {
     database.execute(

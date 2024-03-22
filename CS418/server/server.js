@@ -17,15 +17,11 @@ app.use(
   })
 );
 
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000/",
-//   })
-// );
-
 //  localhost:8080/user
 app.use("/user", require("./routes/user"));
 app.use("/login", require("./routes/login"));
+app.use("/courses", require("./routes/courses"));
+app.use("/courseadvising", require("./routes/courseadvising"));
 
 app.listen(port, () => {
   console.log(`Server is listening at port ${port}`);

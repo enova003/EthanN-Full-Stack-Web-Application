@@ -32,10 +32,10 @@ export default function Login() {
         if(code == data.data.verify){
           if(data.data.admin == 1){
             alert("You are now being redirected to the admin page");
-            window.location.href = `http://localhost:3000/admin?email=${email}`;
+            window.location.href = `http://localhost:3000/admin_home?email=${email}`;
           }else{
             alert("login successful, redirecting you to your profile page")
-            window.location.href = `http://localhost:3000/profile?email=${email}`;
+            window.location.href = `http://localhost:3000/user-home?email=${email}`;
           }
         }
         else{
@@ -59,7 +59,7 @@ export default function Login() {
   return (
     <main className="flex">
         <div 
-        className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm"
+        className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm py-4 px-4 rounded-3xl bg-stone-400"
         >
          {message && (
          <label

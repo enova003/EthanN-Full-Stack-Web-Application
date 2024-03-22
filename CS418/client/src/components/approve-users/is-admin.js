@@ -14,15 +14,6 @@ export default function Admin() {
     }
   }, []);
 
-  // used to make sure that userData is correctly storing the data
-/*   useEffect(() => {
-    if (userData) {
-      userData.forEach(user => {
-        alert(user.u_first_name);
-      });
-    }
-  }, [userData]); */
-
   const fetchData = async () => {
     try {
       const response = await axios.get(`http://localhost:8080/user/approved/approved`);
@@ -50,7 +41,7 @@ export default function Admin() {
 
       if(res.status == 200){
         alert(`${user.u_first_name} ${user.u_last_name} was successfully approved`);
-        window.location.href = `http://localhost:3000/admin?email=${email}`;
+        window.location.reload();
       }
 
       else{
@@ -67,8 +58,8 @@ export default function Admin() {
   {userData ? (
       <>
         {userData.map(user => (
-          <div key={user.id} className="flex">
-            <section className="mb-6">
+          <div key={user.id} className="mb-8 bg-stone-400 rounded-3xl py-6 px-6">
+            <section>
               <h2 className="mb-2 text-center"><strong>{user.u_first_name} {user.u_last_name}</strong></h2>
               <div className="flex flex-col space-y-4">
                 <button  

@@ -1,5 +1,5 @@
 "use client";
-import Admin from "@/components/is-admin/is-admin";
+import Admin from "@/components/approve-users/is-admin";
 
 export default function AdminPage() {
   return (
@@ -7,10 +7,10 @@ export default function AdminPage() {
      <div className="flex min-h-full flex-1 flex-col justify-center px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-           Welcome Administrator
+           The Following users are Awaiting Approval
           </h2>
         </div>
-
+        <p className="text-black font-bold">Click on the corresponding button to approve a user</p>
         <Admin />
       </div>
     </main>

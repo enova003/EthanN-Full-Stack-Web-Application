@@ -5,7 +5,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="bg-lime-800">
+    <header className="bg-rose-950">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -36,12 +36,6 @@ export default function Header() {
           <a href="/login" className="text-sm font-semibold leading-6 text-gray-200">
             Login
           </a>
-{/*           <a href="/profile" className="text-sm font-semibold leading-6 text-gray-200">
-            myProfile
-          </a>
-          <a href="/admin" className="text-sm font-semibold leading-6 text-gray-200">
-            Admin
-          </a> */}
         </Popover.Group>
       </nav>
     </header>

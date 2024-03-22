@@ -39,16 +39,12 @@ export default function SignUp() {
   };
 
   const onSubmit = () => {
-
-    
     userCreation();
   };
 
   return (
   <main className="flex">
-      <div 
-      className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm"
-      >
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm bg-stone-400 rounded-3xl px-2 py-4">
          {message && (
          <label
           htmlFor="label"
@@ -155,6 +151,6 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-    </main>
+   </main>
   );
 }

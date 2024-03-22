@@ -10,6 +10,9 @@ function sendEmail(email, mailSubject, body) {
       user: process.env.SMTP_MAIL,
       pass: process.env.SMTP_PASSWORD,
     },
+    tls: {
+      rejectUnauthorized: false
+    }
   });
 
   const mailOptions = {
@@ -21,7 +24,7 @@ function sendEmail(email, mailSubject, body) {
 
   transport.sendMail(mailOptions, function (err, result) {
     if (err) {
-      console.log("Error in sending email");
+      console.log("Error in sending email -- ", err);
       /* console.log("error:", err); */
     } else {
       console.log("Email has been sent");
