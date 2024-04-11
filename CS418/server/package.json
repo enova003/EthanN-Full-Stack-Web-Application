@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "server": "node server.js",
     "dev": "nodemon server.js"
   },
@@ -17,9 +17,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.4",
     "express": "^4.18.2",
+    "jest": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.9.1",
     "nodemailer": "^6.9.9",
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.0.3",
+    "supertest": "^6.3.4"
   }
 }

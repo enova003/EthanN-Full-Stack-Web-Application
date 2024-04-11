@@ -29,13 +29,17 @@ export default function Profile() {
   };
 
   const submitPassword = async () => {
-    if(password == passwordConfirm){
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/;
+    if(!regex.test(password)){
+      alert("Password must be at least 10 characters long with one capital letter, one lowercase letter, one number, and one symbol (@$!%*?&)");
+    } else{
+      if(password == passwordConfirm){
         await changePassword();
+      } else{
+        alert("The values you entered for your new password and confirm new password do not match");
+      }
+    }
         //alert("submit password works");
-    }
-    else{
-      alert("The values you entered for your new password and confirm new password do not match");
-    }
   };
 
   const submitName = async () => {

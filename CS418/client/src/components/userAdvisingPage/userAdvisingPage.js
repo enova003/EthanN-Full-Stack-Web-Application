@@ -127,12 +127,12 @@ export default function Advising() {
   };
   
   const handleButtonClick = () => {
-    if(courseName !== ''){
+    if(courseName == userData.u_first_name + ' ' + userData.u_last_name){
       setIsButtonClicked(true);
       fetchCoursePlans();
     }
     else
-      alert("Please enter your full name as it appears on your account.")
+      alert("Hey! That information doesn't belond to you..  Enter the name associated with your student account.")
   }
 
   const fetchCoursePlans = async () => {

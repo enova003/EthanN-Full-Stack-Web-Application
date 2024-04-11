@@ -103,4 +103,23 @@ router.post("/", (req, res) => {
     }
   });
 
+  router.delete("/:level", (req, res) => {
+    try {
+      database.execute(
+        "delete from courses where course_level=?",
+        [req.params.level],
+        function (err, result) {
+          if (result.affectedRows == 0) {
+            res.status(401).send("Record not deleted");
+            console.log(error);
+          } else {
+            res.status(200).send("Record deleted successfully!");
+          }
+        }
+      );
+    } catch (error) {
+      console.log(error.message);
+    }
+  });
+
 module.exports = router;

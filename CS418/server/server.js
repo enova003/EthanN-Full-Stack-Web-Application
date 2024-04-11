@@ -36,3 +36,5 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
   res.send("Calling post api");
 });
+
+module.exports={app};

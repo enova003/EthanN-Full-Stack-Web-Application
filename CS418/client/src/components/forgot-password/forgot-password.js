@@ -6,9 +6,14 @@ export default function ResetPassword() {
   const [password, setPassword] = useState("");
 
   const submitPassword = async () => {
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/;
+    if(!regex.test(password)){
+      alert("Password must be at least 10 characters long with one capital letter, one lowercase letter, one number, and one symbol (@$!%*?&)");
+    } else{
       await changePassword();
+    }
       //alert("submit password works");
-  };
+};
 
   const changePassword = async () => {
     const formBody = JSON.stringify({
@@ -39,7 +44,7 @@ export default function ResetPassword() {
 }
 
   return (
-    <main className="max-w-2xl mx-auto p-6 text-black">
+    <main className="max-w-2xl mx-auto p-6 text-black mt-4 sm:mx-auto sm:w-full sm:max-w-sm py-4 px-4 rounded-3xl bg-stone-400">
         <div className="flex">
             <section className="mb-6">
                 <div className="flex flex-col space-y-4">

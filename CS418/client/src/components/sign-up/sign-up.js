@@ -39,7 +39,12 @@ export default function SignUp() {
   };
 
   const onSubmit = () => {
-    userCreation();
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/;
+    if(!regex.test(password)){
+      alert("Password must be at least 10 characters long with one capital letter, one lowercase letter, one number, and one symbol (@$!%*?&)");
+    } else{
+      userCreation();
+    }
   };
 
   return (

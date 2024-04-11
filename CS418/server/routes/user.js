@@ -65,7 +65,7 @@ router.put("/:email", (req, res) => {
         if (result.affectedRows == 0) {
           res.status(401).send("Record not found");
         } else {
-          res.status(200).send("Record updated successfully");
+          res.status(200).send("Password successfully found and updated.");
         }
       }
     );
@@ -119,7 +119,7 @@ router.get("/:email", (req, res) => {
   }
 });
 
-//user getbyid API
+//user delete by id API
 router.delete("/:id", (req, res) => {
   try {
     // u_first_name | u_last_name | u_email        | u_password | is_approved | is_admin
