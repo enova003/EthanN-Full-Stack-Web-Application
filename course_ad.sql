@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2024 at 03:32 PM
+-- Generation Time: Apr 11, 2024 at 07:25 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -49,8 +49,7 @@ INSERT INTO `courseadvising` (`id`, `date`, `current_term`, `status`, `last_term
 (19, '3/13/2024', 'Spring 2024', 'Rejected', 'Fall 2023', '3.66', 'CS 361', 'Ethan G', 'CS 450', 'e.gabriel0402@gmail.com', 'You must register for at least three (3) courses.'),
 (90, '3/20/2024', 'Fall 2024', 'Pending', 'Spring 2024', '3.50', 'CS 250, CS 252, CS 170, CS 381', 'Ethan G', 'CS 330, CS 270, CS 402', 'e.gabriel0402@gmail.com', 'N/A'),
 (97, '05/05/2023', 'Summer 2023', 'Approved', 'Spring 2023', '3.24', 'CS 150', 'Travis Harre', 'CS 250, CS 252, CS 381', 'travisharre449@gmail.com', 'N/A'),
-(98, '06/08/2023', 'Fall 2023', 'Rejected', 'Summer 2023', '1.75', 'CS 170, CS 250, CS 252', 'Travis Harre', 'CS 270, CS 330, CS 355', 'travisharre449@gmail.com', 'Student\'s GPA was 1.75.  The GPA of your previous term must at least be 2.00 to be approved.'),
-(99, '3/20/2024', 'Summer 2024', 'Pending', 'Spring 2024', '3.66', 'CS 250, CS 252, CS 381', 'Travis Harre', 'CS 361, CS 390, CS 368, CS 402', 'travisharre449@gmail.com', 'N/A');
+(107, '03/25/2024', 'Fall 2024', 'Rejected', 'Spring 2024', '3.28', 'CS 170, CS 250, CS 252', 'Travis Harre', 'CS 270, CS 330', 'travisharre449@gmail.com', 'Student must register for atleast three courses.');
 
 -- --------------------------------------------------------
 
@@ -82,7 +81,7 @@ INSERT INTO `courses` (`course_name`, `course_level`, `prerequisite`, `course_lv
 ('Introduction to Unix for Programmers', 'CS 252', 'CS 150', '200'),
 ('Introduction to Computer Architecture II', 'CS 270', 'CS 170', '200'),
 ('Internet Concepts', 'CS 312', 'CS 252', '300'),
-('Object-Oriented Design and Programming', 'CS 330', 'CS250, CS 252', '300'),
+('Object-Oriented Design and Programming', 'CS 330', 'CS 250, CS 252', '300'),
 ('Introduction to Software Engineering', 'CS 350', 'CS 252, CS 330', '300'),
 ('Principles of Programming Languages', 'CS 355', 'CS 250, CS252', '300'),
 ('Data Structures and Algorithms', 'CS 361', 'CS 250, CS 252', '300'),
@@ -133,10 +132,8 @@ INSERT INTO `courses` (`course_name`, `course_level`, `prerequisite`, `course_lv
 ('Applied Algorithms', 'CS 810', 'CS 600', '800'),
 ('Natural Language Processing', 'CS 833', 'CS 480', '800'),
 ('Memory Analysis and Forensics', 'CS 862', 'CS 270, CS 471', '800'),
-('Advanced Computer and Network Security', 'CS 872', 'CS 455', '800'),
-('Topics in Computer Science', 'CS 895', 'None', '800'),
-('Doctoral Research', 'CS 898', 'None', '800'),
-('Doctoral Dissertation', 'CS 899', 'None', '800');
+('Advanced Computer and Network Security', 'CS 872', 'None', '800'),
+('Topics in Computer Science ', 'CS 895', 'CS 862, CS 872', '800');
 
 -- --------------------------------------------------------
 
@@ -159,11 +156,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`u_id`, `u_first_name`, `u_last_name`, `u_email`, `u_password`, `is_approved`, `is_admin`) VALUES
-(1, 'Admin', 'Admin', 'enova003@odu.edu', '$2b$10$kVpUc/Ryqw2YYbFTGLKnR.yGAtwSI1Zzr9WB6tflcIn8pnOy6nxly', 1, 1),
+(1, 'Admin', 'Admin', 'enova003@odu.edu', '$2b$10$T0/38I4.ETjd27yeLO3qE.YAE5dZWCHsJdn59//f0mSaoMkXTp132', 1, 1),
 (4, 'test', 'test', 'test@test.com', '$2b$10$fihH187/r4aU/HpD6YwFUOaw6rCjrhSyssQiE0IIqIf75S9xiTRzW', 1, 0),
 (19, 'James', 'Baxter', 'test@gmail.com', '$2b$10$dMBS4ZfxsRgCXstjDcUW9OnSbSeM91l9ClP479L33PFb2CH1LvTCm', 0, 0),
 (64, 'Brad', 'Way', 'bradway@email.com', '$2b$10$/.5zQSfe3ZfbBlvHV/T04.1D7VBUWkzonEH4tL0xM0QfcItMkFYQG', 0, 0),
-(82, 'Ethan', 'G', 'e.gabriel0402@gmail.com', '$2b$10$J7MV18bsOm/IQBBj9PMM3e.YNUtPRDZm/eMHgDTI3/amceQrSo2qO', 1, 0),
+(82, 'Ethan', 'G', 'e.gabriel0402@gmail.com', '$2b$10$awMugNHOTEwwR9AgS30wyu.NSRiJvcnmpWfTzXtgLAESgCu34Q2Iu', 1, 0),
 (84, 'Travis', 'Harre', 'travisharre449@gmail.com', '$2b$10$dgahSBJcqYrl1QuBHvtlzuR62gDmHZotw4LSNy/gsnm7bwM0s4RAa', 1, 0);
 
 --
@@ -197,7 +194,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `courseadvising`
 --
 ALTER TABLE `courseadvising`
-  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` bigint(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `user`
