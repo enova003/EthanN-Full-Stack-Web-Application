@@ -19,7 +19,7 @@ store all the information; the database utilizes MySQL.
 Spread throughout the entire semester, I, along with the rest of the students, was asked 
 to implement over 35 different features, which I have provided below. I have successfully 
 implemented all the features seen below, and I recieved an 'A' letter grade in this course.
-
+______________________________________________________________________________________________
 1. Users should be able to register new accounts in a database using email addresses.
 2. Users are identified by email address.
 3. Password must be encrypted before storing in the database.
