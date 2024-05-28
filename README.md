@@ -1,8 +1,8 @@
 #Description
 
 This repository contains my code for a semester long project, where the students of Old Dominion University's
-CS 418 were asked to build a full-stack web appliaction.  The main purpose of this course was to allow students 
-to gain experience developing both a server and client side.  
+CS 418 were asked to build a full-stack web appliaction.  This course allowed me to gain experience
+developing both a server and client for a website.
 
 The overall purpose of the website is to be a course portal for a university where users can view
 a course catalog, register/add courses to their profile, view the status of the terms they have
@@ -17,8 +17,9 @@ store all the information; the database utilizes MySQL.
 
 #Features
 
-Spread throughout the entire semester, the students were asked to implement 37 different features, which I have provided below.  
-I have successfully implemented all the features that were required, and I recieved an 'A' letter grade in this course.
+Spread throughout the entire semester, I, along with the rest of the students, was asked 
+to implement 37 different features, which I have provided below. I have successfully 
+implemented all the features seen below, and I recieved an 'A' letter grade in this course.
 __________________________________________________________________________________________________________________________________
 
 1. Users should be able to register new accounts in a database using email addresses.
