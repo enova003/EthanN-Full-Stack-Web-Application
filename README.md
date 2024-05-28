@@ -87,4 +87,3 @@ Implement regex for all password fields in application.
 36. Develop and execute test cases for the backend application, focusing on one form.
 37. A browser compatible design, layout should be browser compatible and window size
 compatible design.
-
