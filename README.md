@@ -18,7 +18,7 @@ store all the information; the database utilizes MySQL.
 #Features
 
 Spread throughout the entire semester, I, along with the rest of the students, was asked 
-to implement 37 different features, which I have provided below. I have successfully 
+to implement over 30 different features, which I have provided below. I have successfully 
 implemented all the features seen below, and I recieved an 'A' letter grade in this course.
 __________________________________________________________________________________________________________________________________
 
