@@ -1,4 +1,4 @@
-#Description
+# Description
 
 This repository contains my code for a semester long project, where the students of Old Dominion University's
 CS 418 were asked to build a full-stack web appliaction.  This course allowed me to gain experience
@@ -14,7 +14,7 @@ construct the website. Additionally, the frameworks that I built the website wit
 and I used the Tailwind CSS library. Finally, I used PHPMyAdmin as my database to
 store all the information; the database utilizes MySQL.
 
-#Features
+# Features
 
 Spread throughout the entire semester, I, along with the rest of the students, was asked 
 to implement over 35 different features, which I have provided below. I have successfully 
